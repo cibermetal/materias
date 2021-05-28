@@ -78,7 +78,7 @@
             },
             deleteMaterias(id) { 
                 this.axios
-                    .delete(`http://localhost:8000/api/materias/${id}`)
+                    .delete(`http://prueba-conocimiento.herokuapp.com/api/materias/${id}`)
                     .then(response => {
                         let i = this.materias.map(data => data.id).indexOf(id);
                         this.materias.splice(i, 1)
@@ -86,7 +86,7 @@
             },
             addMateria() {
                 this.axios
-                    .post('http://localhost:8000/api/materias/',{
+                    .post('http://prueba-conocimiento.herokuapp.com/api/materias/',{
 							nombre: this.materiaForm.nombre,
 							docente: this.materiaForm.docente,
 							tipo: this.materiaForm.tipo
