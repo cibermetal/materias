@@ -62,7 +62,7 @@
         },
         created() {
             this.axios
-                .get('http://localhost:8000/api/materias/')
+                .get('http://prueba-conocimiento.herokuapp.com/api/materias/')
                 .then(response => {
                     this.materias = response.data;
                 });
@@ -70,7 +70,7 @@
         methods: {
             fecthData() {
             this.axios
-                .get('http://localhost:8000/api/materias/')
+                .get('http://prueba-conocimiento.herokuapp.com/api/materias/')
                 .then(response => {
                     this.materias = response.data;
                 });
