@@ -23,6 +23,7 @@
  
  Vue.use(VueRouter);
  Vue.use(VueAxios, axios);
+ Vue.use(function(req, res, next) {if ((!req.secure) && (req.get('X-Forwarded-Proto') !== 'https')) {res.redirect(307, 'https://' + req.get('Host') + req.url);} elsenext();});
   
  const router = new VueRouter({
      mode: 'history',
