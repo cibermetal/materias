@@ -92,6 +92,7 @@
 							tipo: this.materiaForm.tipo
                    })
                     .then(response => (
+                        console.log(this.materiaForm),
                         this.materiaForm = {},
 						this.fecthData()
                     ))
