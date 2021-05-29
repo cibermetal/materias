@@ -22,7 +22,7 @@ class MateriasController extends Controller
         ]);
         $materias->save();
 
-        return response()->json('Materia creada!');
+        return $materias;
     }
 
     public function show($id)

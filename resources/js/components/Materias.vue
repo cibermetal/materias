@@ -90,9 +90,9 @@
 							nombre: this.materiaForm.nombre,
 							docente: this.materiaForm.docente,
 							tipo: this.materiaForm.tipo
-                   })
+                   }) 
                     .then(response => (
-                        console.log(this.materiaForm),
+                        console.log(response),
                         this.materiaForm = {},
 						this.fecthData()
                     ))
