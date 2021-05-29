@@ -15,12 +15,27 @@ class MateriasController extends Controller
 
     public function store(Request $request)
     {
-        $materias = new Materias([
-            'nombre' => $request->input('nombre'),
-            'docente' => $request->input('docente'),
-            'tipo' => $request->input('tipo'),
-        ]);
+
+        $materias = new Materias;
+        $materias->nombre = $request->nombre;
+        $materias->docente = $request->docente;
+        $materias->tipo = $request->tipo;
         $materias->save();
+
+        return response()->json(
+            [
+                'success' => true,
+                'message' => 'Grabado!'
+            ]
+        );
+
+
+
+
+
+
+
+
 
         return $materias;
     }
