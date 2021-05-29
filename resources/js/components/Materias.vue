@@ -84,6 +84,7 @@
                         this.materias.splice(i, 1)
                     });
             },
+
             addMateria() {
                 this.axios
                     .post('/api/materias/',{
@@ -93,11 +94,13 @@
                    }) 
                     .then(response => (
                         console.log(response),
+                        alert('Registo Agregado!'),
                         this.materiaForm = {},
 						this.fecthData()
+                        //this.$router.push({ name: 'home' })
                     ))
                     .catch(err => console.log(err))
-                    .finally(() => this.loading = false)
+                    //.finally(() => this.loading = false)
             }   
            
         
